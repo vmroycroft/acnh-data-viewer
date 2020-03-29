@@ -4,7 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import Container from 'react-bootstrap/Container';
 import Header from './components/Header';
 import Toggle from './components/Toggle';
-import ItemTable from './components/ItemTable';
+import Items from './components/Items';
 import Footer from './components/Footer';
 
 import './App.css';
@@ -20,9 +20,7 @@ function App() {
 			<Header />
 			<Container>
 				<Toggle />
-				{categories.map((value, i) => {
-					return <ItemTable category={value} />;
-				})}
+				<Items />
 			</Container>
 			<Footer />
 		</ApolloProvider>

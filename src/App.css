@@ -37,7 +37,7 @@
 #footer-grass::before {
 	border-radius: 100%;
 	position: absolute;
-	background-image: url(/images/green-triangles.png);
+	background-image: url(/images/grass.png);
 	background-color: #01a623;
 	background-size: 156px 154.5px;
 	background-position: 50% 48%;
@@ -46,6 +46,11 @@
 	bottom: -200px;
 	content: '';
 	top: 0;
+}
+
+/* TODO research adding Bootstrap classes to ka-table */
+.ka-table tbody tr:nth-of-type(odd) {
+	background-color: rgba(0, 0, 0, 0.05);
 }
 
 @keyframes App-logo-spin {

@@ -5,7 +5,7 @@ function Header() {
 }
 
 const style = {
-	backgroundImage: 'url(/images/apple-border-top_2x.png)',
+	backgroundImage: 'url(/images/apple-border.png)',
 	backgroundSize: '995px 125px',
 	height: '125px'
 };

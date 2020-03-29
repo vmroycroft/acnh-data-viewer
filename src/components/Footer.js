@@ -11,7 +11,6 @@ function Footer() {
 			<div>ACNH Data Viewer 0.1.0</div>
 			<div>Designed & Built by Vanessa Roycroft</div>
 			<div id="footer-grass"></div>
-			{/* <img src="/images/cedar.png"></img> */}
 		</footer>
 	);
 }

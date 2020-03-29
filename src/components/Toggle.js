@@ -4,11 +4,11 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 
 function Toggle() {
 	return (
-		<ToggleButtonGroup type="radio" name="hemisphere" defaultValue="northern" style={style}>
-			<ToggleButton value="northern" size="lg">
+		<ToggleButtonGroup type="radio" name="hemisphere" defaultValue="northern" className="float-sm-right mt-3 mt-sm-0 d-block text-center">
+			<ToggleButton value="northern" size="sm">
 				Northern Hemisphere
 			</ToggleButton>
-			<ToggleButton value="southern" size="lg">
+			<ToggleButton value="southern" size="sm">
 				Southern Hemisphere
 			</ToggleButton>
 		</ToggleButtonGroup>
@@ -16,8 +16,7 @@ function Toggle() {
 }
 
 const style = {
-	width: '100%',
-	marginTop: '2rem'
+	float: 'right'
 };
 
 export default Toggle;

@@ -1,70 +1,59 @@
 import React, { useState } from 'react';
-import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
 import { Table } from 'ka-table';
 import { DataType, SortDirection, SortingMode } from 'ka-table/enums';
 
 import 'ka-table/style.css';
 
-const ITEMS_QUERY = gql`
-	{
-		items {
-			name
-			sellPrice
-		}
-	}
-`;
-
 const tableOptions = {
 	columns: [
 		{ dataType: DataType.String, key: 'name', sortDirection: SortDirection.Ascend, title: 'Name' },
-		{ key: 'sellPrice', title: 'Sell Price', dataType: DataType.Number }
+		{ key: 'location', title: 'Location', dataType: DataType.String },
+		{ key: 'sellPrice', title: 'Sell Price', dataType: DataType.Number },
+		{ key: 'notes', title: 'Note', dataType: DataType.String }
 	],
 	rowKeyField: 'id',
 	sortingMode: SortingMode.Single
 };
 
 function ItemTable(props) {
-	const { loading, error, data } = useQuery(ITEMS_QUERY);
-
 	const [option, changeOptions] = useState(tableOptions);
 	const onOptionChange = value => {
 		changeOptions({ ...option, ...value });
 	};
 
-	if (loading) return <p>Loading...</p>;
-	if (error) return <p>Error :(</p>;
-
 	return (
 		<section style={style}>
-			<h5 style={categoryStyle}>{props.category}</h5>
-			<Table {...option} data={data.items} onOptionChange={onOptionChange} />
+			<div style={conStyle} class="d-block d-sm-inline-block text-center">
+				<img src="/images/wood-sign.png" alt="Wood sign" style={imgStyle}></img>
+				<h5 style={categoryStyle}>{props.category}</h5>
+			</div>
+			<Table {...option} data={props.items} onOptionChange={onOptionChange} />
 		</section>
 	);
 }
+
+const conStyle = {
+	position: 'relative',
+	display: 'inline-block',
+	color: '#ffffff',
+	textShadow: '0 2px 2px rgba(0, 0, 0, 0.5)',
+	marginBottom: '1rem'
+};
 
 const style = {
 	marginTop: '2rem'
 };
 
+const imgStyle = {};
+
 const categoryStyle = {
-	backgroundImage: 'url(/images/wood-sign.png',
-	backgroundRepeat: 'no-repeat',
-	backgroundSize: '25%',
-	height: '107px',
+	position: 'absolute',
+	top: '50%',
+	left: '50%',
+	transform: 'translate(-50%, -50%)',
+	fontSize: '1.75rem',
 	color: '#ffffff',
 	textShadow: '0 2px 2px rgba(0, 0, 0, 0.5)'
 };
-
-// const categoryStyle = {
-// 	backgroundImage: 'url(/images/dots.png',
-// 	backgroundSize: '48px 48px',
-// 	backgroundColor: '#F7AA18',
-// 	// backgroundColor: '#5D4037',
-// 	marginBottom: 0,
-// 	color: '#ffffff',
-// 	textShadow: '0 2px 2px rgba(0, 0, 0, 0.5)',
-// 	padding: '1rem'
-// };
 
 export default ItemTable;
