@@ -28,6 +28,26 @@
 	color: #61dafb;
 }
 
+#footer-grass {
+	height: 75px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 1rem;
+}
+#footer-grass::before {
+	border-radius: 100%;
+	position: absolute;
+	background-image: url(/images/green-triangles.png);
+	background-color: #01a623;
+	background-size: 156px 154.5px;
+	background-position: 50% 48%;
+	right: -200px;
+	left: -200px;
+	bottom: -200px;
+	content: '';
+	top: 0;
+}
+
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);

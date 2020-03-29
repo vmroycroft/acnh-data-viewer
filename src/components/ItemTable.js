@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
-import Container from 'react-bootstrap/Container';
 import { Table } from 'ka-table';
 import { DataType, SortDirection, SortingMode } from 'ka-table/enums';
 
@@ -25,9 +24,8 @@ const tableOptions = {
 	sortingMode: SortingMode.Single
 };
 
-function ItemTable() {
+function ItemTable(props) {
 	const { loading, error, data } = useQuery(ITEMS_QUERY);
-	console.log(data);
 
 	const [option, changeOptions] = useState(tableOptions);
 	const onOptionChange = value => {
@@ -39,10 +37,8 @@ function ItemTable() {
 
 	return (
 		<section style={style}>
-			<Container>
-				<h1 style={titleStyle}>Northern Hemisphere</h1>
-				<Table {...option} data={data.items} onOptionChange={onOptionChange} />
-			</Container>
+			<h5 style={categoryStyle}>{props.category}</h5>
+			<Table {...option} data={data.items} onOptionChange={onOptionChange} />
 		</section>
 	);
 }
@@ -51,8 +47,24 @@ const style = {
 	marginTop: '2rem'
 };
 
-const titleStyle = {
-	marginBottom: '1rem'
+const categoryStyle = {
+	backgroundImage: 'url(/images/wood-sign.png',
+	backgroundRepeat: 'no-repeat',
+	backgroundSize: '25%',
+	height: '107px',
+	color: '#ffffff',
+	textShadow: '0 2px 2px rgba(0, 0, 0, 0.5)'
 };
+
+// const categoryStyle = {
+// 	backgroundImage: 'url(/images/dots.png',
+// 	backgroundSize: '48px 48px',
+// 	backgroundColor: '#F7AA18',
+// 	// backgroundColor: '#5D4037',
+// 	marginBottom: 0,
+// 	color: '#ffffff',
+// 	textShadow: '0 2px 2px rgba(0, 0, 0, 0.5)',
+// 	padding: '1rem'
+// };
 
 export default ItemTable;
