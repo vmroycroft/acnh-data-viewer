@@ -23,7 +23,7 @@ function ItemTable(props) {
 
 	return (
 		<section style={style}>
-			<div style={conStyle} class="d-block d-sm-inline-block text-center">
+			<div style={conStyle} className="d-block d-sm-inline-block text-center">
 				<img src="/images/wood-sign.png" alt="Wood sign" style={imgStyle}></img>
 				<h5 style={categoryStyle}>{props.category}</h5>
 			</div>
