@@ -15,8 +15,4 @@ function Toggle() {
 	);
 }
 
-const style = {
-	float: 'right'
-};
-
 export default Toggle;

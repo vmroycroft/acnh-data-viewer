@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 
 import './App.css';
 
-const categories = ['Fish', 'Bugs', 'Deep Sea'];
 const client = new ApolloClient({
 	uri: 'http://localhost:4000'
 });
