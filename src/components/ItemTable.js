@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Table } from 'ka-table';
 import { DataType, SortDirection, SortingMode } from 'ka-table/enums';
+import woodSign from '../assets/images/wood-sign.png';
 
 import 'ka-table/style.css';
 
@@ -24,7 +25,7 @@ function ItemTable(props) {
 	return (
 		<section style={style}>
 			<div style={conStyle} className="d-block d-sm-inline-block text-center">
-				<img src="/images/wood-sign.png" alt="Wood sign" style={imgStyle}></img>
+				<img src={woodSign} alt="Wood sign" style={imgStyle}></img>
 				<h5 style={categoryStyle}>{props.category}</h5>
 			</div>
 			<Table {...option} data={props.items} onOptionChange={onOptionChange} />

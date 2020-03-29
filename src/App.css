@@ -37,7 +37,7 @@
 #footer-grass::before {
 	border-radius: 100%;
 	position: absolute;
-	background-image: url(/images/grass.png);
+	background-image: url(./assets/images/grass.png);
 	background-color: #01a623;
 	background-size: 156px 154.5px;
 	background-position: 50% 48%;
