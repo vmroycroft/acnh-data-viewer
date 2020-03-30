@@ -8,9 +8,7 @@ const ITEMS_QUERY = gql`
 		items {
 			name
 			category
-			location
 			sellPrice
-			notes
 		}
 	}
 `;

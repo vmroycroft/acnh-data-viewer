@@ -8,9 +8,7 @@ import 'ka-table/style.css';
 const tableOptions = {
 	columns: [
 		{ dataType: DataType.String, key: 'name', sortDirection: SortDirection.Ascend, title: 'Name' },
-		{ key: 'location', title: 'Location', dataType: DataType.String },
-		{ key: 'sellPrice', title: 'Sell Price', dataType: DataType.Number },
-		{ key: 'notes', title: 'Note', dataType: DataType.String }
+		{ key: 'sellPrice', title: 'Sell Price', dataType: DataType.Number }
 	],
 	rowKeyField: 'id',
 	sortingMode: SortingMode.Single

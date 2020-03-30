@@ -5,11 +5,10 @@ import '../App.css';
 function Footer() {
 	return (
 		<footer style={style}>
-			<a href="https://github.com/vmroycroft" target="_blank" rel="noopener noreferrer" title="View project on Github">
+			<a href="https://github.com/vmroycroft/acnh-data-viewer" target="_blank" rel="noopener noreferrer" title="View project on Github">
 				<img src={octocat} alt="Github Octocat" style={imgStyle} />
 			</a>
 			<div>ACNH Data Viewer {process.env.REACT_APP_VERSION}</div>
-			<div>Designed & Built by Vanessa Roycroft</div>
 			<div id="footer-grass"></div>
 		</footer>
 	);
