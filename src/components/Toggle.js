@@ -5,12 +5,8 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 function Toggle() {
 	return (
 		<ToggleButtonGroup type="radio" name="hemisphere" defaultValue="northern" className="float-sm-right mt-3 mt-sm-0 d-block text-center">
-			<ToggleButton value="northern" size="sm">
-				Northern Hemisphere
-			</ToggleButton>
-			<ToggleButton value="southern" size="sm">
-				Southern Hemisphere
-			</ToggleButton>
+			<ToggleButton value="northern">Northern Hemisphere</ToggleButton>
+			<ToggleButton value="southern">Southern Hemisphere</ToggleButton>
 		</ToggleButtonGroup>
 	);
 }
