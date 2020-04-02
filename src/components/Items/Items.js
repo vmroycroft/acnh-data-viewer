@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
-import ItemTable from './ItemTable';
+import ItemTable from '../ItemTable';
 
 const ITEMS_QUERY = gql`
 	{
@@ -15,7 +15,7 @@ const ITEMS_QUERY = gql`
 
 const categories = ['Fish', 'Bug', 'Beach', 'Fossil', 'Fruit', 'Miscellaneous'];
 
-function Items() {
+export default function Items() {
 	const { loading, error, data } = useQuery(ITEMS_QUERY);
 
 	if (loading) return <p>Loading...</p>;
@@ -25,5 +25,3 @@ function Items() {
 		return <ItemTable category={value} items={data.items.filter(item => item.category === value)} />;
 	});
 }
-
-export default Items;

@@ -1,0 +1,28 @@
+.footer {
+	font-size: 0.8rem;
+}
+
+.footer__image {
+	height: 2rem;
+	margin-bottom: 0.15rem;
+}
+
+#footer-grass {
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 1rem;
+}
+#footer-grass::before {
+	border-radius: 100%;
+	position: absolute;
+	background-image: url(../../assets/images/grass.png);
+	background-color: #01a623;
+	background-size: 156px 154.5px;
+	background-position: 50% 48%;
+	right: -200px;
+	left: -200px;
+	bottom: -200px;
+	content: '';
+	top: 0;
+}

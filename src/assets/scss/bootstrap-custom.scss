@@ -1,0 +1,37 @@
+// See https://getbootstrap.com/docs/4.4/getting-started/theming/
+// Note: '~' is shorthand for '../../../node_modules/'
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// Override Bootstrap default spacing utilities to match Tailwind's conventions
+// See https://tailwindcss.com/docs/padding
+$spacers: (
+	3: (
+		$spacer * 0.75
+	),
+	4: (
+		$spacer
+	),
+	5: (
+		$spacer * 1.25
+	),
+	6: (
+		$spacer * 1.5
+	),
+	8: (
+		$spacer * 2
+	),
+	10: (
+		$spacer * 2.5
+	),
+	12: (
+		$spacer * 3
+	),
+	16: (
+		$spacer * 4
+	)
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
