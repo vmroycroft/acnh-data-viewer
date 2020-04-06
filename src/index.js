@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/scss/bootstrap.scss';
-import './assets/scss/bootstrap-custom.scss';
+import './bootstrap-custom.scss';
 import './index.css';
 
 ReactDOM.render(

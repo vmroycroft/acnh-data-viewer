@@ -6,10 +6,9 @@ import Header from './components/Header';
 import Compare from './components/Compare';
 import Items from './components/Items';
 import Footer from './components/Footer';
-import './App.css';
 
 const client = new ApolloClient({
-	uri: process.env.REACT_APP_GQL_URL
+	uri: process.env.REACT_APP_GQL_URL,
 });
 
 function App() {
